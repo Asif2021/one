@@ -1,4 +1,6 @@
-import { Button } from "@/components/ui/button";
+import { Navbar02 } from "@/components/ui/shadcn-io/navbar-02";
+
+
 
 export const metadata = {
   title: "Landing-Page",
@@ -6,6 +8,8 @@ export const metadata = {
 
 export default function Home() {
   return (
-<Button>Click Me</Button>
+ <div className="relative w-full">
+    <Navbar02 />
+  </div>
   );
 }
