@@ -1,4 +1,5 @@
 import Navbar from "@/components/ui/navbar";
+import HeroWithVideo from "@/components/ui/heroWithVideo";
 
 
 
@@ -10,6 +11,7 @@ export default function Home() {
   return (
  <div>
   <Navbar />
+  <HeroWithVideo />
   </div>
   );
 }

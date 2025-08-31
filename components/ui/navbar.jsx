@@ -51,7 +51,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Mobile Menu Icon */}
            {/* Logo */}
-          <div className="flex-shrink-0 font-bold text-2xl text-gray-900 md:text-left absolute left-4 md:static">
+          <div className="flex-shrink-0 font-bold text-2xl text-white md:text-left absolute left-4 md:static">
             MyLogo
           </div>
           <div className="flex items-center md:hidden absolute right-4">
@@ -70,9 +70,9 @@ export default function Navbar() {
         {links.map((item) => (
             <div key={item.name} className="relative group">
             {/* Trigger */}
-            <button className="flex items-center gap-2 text-gray-900 font-medium hover:text-gray-600 transition">
+            <button className="flex items-center gap-2 text-white font-medium hover:text-orange-600 transition">
                 {item.name}
-                {item.icon && <item.icon className="w-5 h-5 text-black" />}
+                {item.icon && <item.icon className="w-5 h-5 text-white hover:text-orange-600" />}
             </button>
 
             {/* Dropdown */}
