@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, BookOpen, Info, ChevronDown } from "lucide-react";
 import {  } from 'lucide-react';
+import Card from "./card";
 
 
 export default function Navbar() {
@@ -21,18 +22,19 @@ export default function Navbar() {
     name: 'Services',
     href: '#',
     icon: ChevronDown,
-    description: 'Popover with more details',
+    description: 'Explore our range of services services, including web development, mobile app development, and more, and more and more and more and more and more and more and more',
   },
   {
     name: 'Products',
     href: '#',
     icon: ChevronDown,
-    description: 'Explore our range of services',
+    description: 'Explore our range of services services, including web development, mobile app development, and more, and more and more and more and more and more and more and more',
   },
   {
     name: 'Projects',
     href: '#',
     icon: ChevronDown,
+    description: 'Explore our range of services services, including web development, mobile app development, and more, and more and more and more and more and more and more and more',
   },
   { name: 'Blogs', href: '#', icon: null },
 ]
@@ -49,10 +51,10 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Mobile Menu Icon */}
            {/* Logo */}
-          <div className="flex-shrink-0 font-bold text-2xl text-gray-900 md:text-left absolute right-4 md:static">
+          <div className="flex-shrink-0 font-bold text-2xl text-gray-900 md:text-left absolute left-4 md:static">
             MyLogo
           </div>
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center md:hidden absolute right-4">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-gray-800 focus:outline-none"
@@ -63,31 +65,34 @@ export default function Navbar() {
 
          
 
-          {/* Center Menu (Desktop) */}
-          <div className="hidden md:flex space-x-10">
-            {links.map((item) => (
-              <div key={item.name} className="relative group">
+         {/* Center Menu (Desktop) */}
+        <div className="hidden md:flex space-x-10">
+        {links.map((item) => (
+            <div key={item.name} className="relative group">
+            {/* Trigger */}
             <button className="flex items-center gap-2 text-gray-900 font-medium hover:text-gray-600 transition">
-            {/* Render icon if exists */}
-             {item.name}
-            {item.icon && <item.icon className="w-5 h-5 text-blue-600" />}
-           
-          </button>
-                {/* Popover Dropdown */}
-                {item.name !== 'Blogs' && (
-        <div className="absolute left-0 w-screen hidden group-hover:block mt-4">
-            <div className="bg-white/80 backdrop-blur-md shadow-lg p-6">
-              <p className="text-gray-700">{item.name} {item.description}</p>
+                {item.name}
+                {item.icon && <item.icon className="w-5 h-5 text-black" />}
+            </button>
+
+            {/* Dropdown */}
+            {item.name !== "Blogs" && (
+                <div className="absolute left-1/2 -translate-x-1/2 mt-6 z-50 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 w-max">
+                <div className="bg-white/90 backdrop-blur-md shadow-lg p-6 rounded-xl">
+                    <div className="text-gray-700">
+                    {item.name} {item.description}
+                    </div>
+                </div>
+                </div>
+            )}
             </div>
-        </div>)}
-              </div>
-            ))}
-          </div>
+        ))}
+        </div>
 
           {/* Right Side Button */}
           <div className="hidden md:flex">
-            <button className="px-5 py-2 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition">
-              Get Started
+            <button className="px-5 py-2 rounded-full bg-orange-500 text-white font-medium transition">
+              Contact Us
             </button>
           </div>
         </div>
@@ -97,18 +102,19 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white text-black shadow-lg">
           <div className="px-4 pt-4 pb-6 space-y-4">
-            {["Products", "Projects", "Services"].map((item) => (
-              <details key={item} className="group">
+            {links.map((item) => (
+              <details key={item.name}>
                 <summary className="cursor-pointer font-medium text-lg">
-                  {item}
+                  {/* Render icon if exists */}
+                      {item.name}
                 </summary>
                 <div className="pl-4 mt-2 text-gray-700">
-                  <p>{item} submenu content...</p>
+                  <p>{item.description}</p>
                 </div>
               </details>
             ))}
-            <button className="w-full mt-4 px-5 py-2 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition">
-              Get Started
+            <button className="mt-4 px-5 py-2 rounded-md bg-transparent md:bg-blue-600 text-black font-medium text-lg hover:bg-blue-700 transition">
+              Contact Us
             </button>
           </div>
         </div>
