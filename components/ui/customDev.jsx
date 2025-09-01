@@ -37,7 +37,7 @@ export default function CustomDev() {
           vision. Build a resilient, adaptable business prepared for the future
           with meticulously crafted software solutions.
         </p>
-        <button className="mt-6 bg-black font-bold text-white px-6 py-2 rounded-xl hover:bg-orange-500 transition">
+        <button className="mt-15 bg-black font-bold text-white px-6 py-2 rounded-xl hover:bg-orange-500 transition">
           Know more
         </button>
       </div>

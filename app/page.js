@@ -2,7 +2,7 @@ import Navbar from "@/components/ui/navbar";
 import HeroWithVideo from "@/components/ui/heroWithVideo";
 import About from "@/components/ui/about";
 import CustomDev from "@/components/ui/customDev";
-
+import Planning from "@/components/ui/planning";
 
 
 export const metadata = {
@@ -17,15 +17,16 @@ export default function Home() {
 
   {/* Hero Section */}
   <div className="relative">
-    <HeroWithVideo />
+  <HeroWithVideo />
 
   {/* About Section overlaps upward */}
     <div className="relative z-10 -mt-15 bg-white rounded-t-4xl">
-      <About />
+  <About />
     </div>
   </div>
   <CustomDev/>
-
+  <Planning/>
+  
 </div>
 
   );

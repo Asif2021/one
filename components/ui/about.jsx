@@ -10,7 +10,7 @@ export default function About() {
     <p className="mt-4 text-gray-600 font-semibold">
       De-risking your future through agile engineering and secure delivery pipelines. We keep your infrastructure and applications stable, cost-effective, and relevant to evolving business needs.
     </p>
-    <button className="mt-6 bg-black font-bold text-white px-6 py-2 rounded-xl hover:bg-orange-500 transition">
+    <button className="mt-15 bg-black font-bold text-white px-6 py-2 rounded-xl hover:bg-orange-500 transition">
       Know more
     </button>
   </div>
