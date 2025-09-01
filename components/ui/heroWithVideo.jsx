@@ -15,7 +15,7 @@ export default function HeroWithVideo() {
   }, []);
 
   return (
-   <section className="relative w-full h-screen overflow-hidden">
+   <section className="relative w-full h-3/4 overflow-hidden">
   {/* Background Video */}
   <video
     className="absolute top-0 left-0 w-full h-full object-cover opacity-80"
@@ -61,7 +61,7 @@ export default function HeroWithVideo() {
             <h1 className="text-3xl md:text-9xl text-orange-600">
               Tomorrow
             </h1>
-            <p className="px-10 md:px-40 py-3 mb-5 rounded-lg shadow-lg text-xs md:text-base">
+            <p className="px-10 md:px-52 py-3 mb-5 rounded-lg shadow-lg text-xs md:text-base">
               From operating models to customer journeys, and product life cycles
               to employee experiences, revolutionizing every facet of global
               businesses.
@@ -76,6 +76,7 @@ export default function HeroWithVideo() {
   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 my-[5%] z-40">
     <LogoNavbar />
   </div>
+  
 </section>
 
   );
