@@ -1,5 +1,6 @@
 import Navbar from "@/components/ui/navbar";
 import HeroWithVideo from "@/components/ui/heroWithVideo";
+import About from "@/components/ui/about";
 
 
 
@@ -12,6 +13,7 @@ export default function Home() {
  <div>
   <Navbar />
   <HeroWithVideo />
+  <About />
   </div>
   );
 }

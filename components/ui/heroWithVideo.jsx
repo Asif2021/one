@@ -73,7 +73,7 @@ export default function HeroWithVideo() {
   </div>
 
  {/* Logo Navbar at the bottom */}
-  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 my-[5%] z-50">
+  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 my-[5%] z-40">
     <LogoNavbar />
   </div>
 </section>
