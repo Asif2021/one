@@ -3,6 +3,7 @@ import HeroWithVideo from "@/components/ui/heroWithVideo";
 import About from "@/components/ui/about";
 import CustomDev from "@/components/ui/customDev";
 import Planning from "@/components/ui/planning";
+import CaseStudy from "@/components/ui/caseStudy";
 
 
 export const metadata = {
@@ -26,6 +27,7 @@ export default function Home() {
   </div>
   <CustomDev/>
   <Planning/>
+  <CaseStudy/>
   
 </div>
 
