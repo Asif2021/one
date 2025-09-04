@@ -67,7 +67,7 @@ export default function CaseStudy() {
   <motion.span
     animate={{ borderColor: heading === i ? "#f97316" : "#808080" }}
     transition={{ duration: 0.8, ease: "easeInOut" }}
-    className="border-t-2 md:border-t-0 md:border-l-2 h-0 md:h-8 w-8 md:w-5 mr-0 mb-4 md:mb-0"
+    className="border-b-2 md:border-b-0 md:border-l-2 h-0 md:h-8 w-8 md:w-5 mr-0 mb-4 md:mb-0"
   />
   {title}
 </motion.h1>
