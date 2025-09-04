@@ -42,7 +42,7 @@ export default function CaseStudy() {
     const interval = setInterval(() => {
      setIndex((prev) => (prev + 1) % images.length);
      setHeading((prev) => (prev + 1) % headings.length);
-    }, 2000); 
+    }, 2500); 
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -50,7 +50,7 @@ export default function CaseStudy() {
 
   return (
 <div className="max-w-6xl mx-auto px-8 pt-8 overflow-hidden my-10 md:mt-0 bg-black text-white rounded-4xl">
-        <h1 className="text-white text-5xl md:text-xl font-bold">Case Studies</h1>
+        <h1 className="text-white text-base md:text-xl font-bold">Case Studies</h1>
     <div className=" hidden md:grid grid-cols-2 gap-4 mt-2 mb-5">
         <h1 className="font-bold text-3xl">Innovation at Every Step</h1>
         <h3 className="pr-20">Embrace the power of cutting-edge technology with us to accelerate growth and drive your business forward.</h3>
@@ -88,11 +88,11 @@ export default function CaseStudy() {
         <div className="flex flex-row justify-between mt-4">
           {data[index].stats.map((stat, i) => (
             <div key={i}>
-               <h1
-        className={`text-6xl ${
-          index === 1 ? "text-cyan-500" : "text-orange-500"
-        }`}
-      >{stat.value}</h1>
+           <motion.h1 key={index}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }} className={`text-6xl overflow-hidden ${ index === 1 ? "text-cyan-500" : "text-orange-500"}`}>{stat.value}</motion.h1>
               <p>{stat.label}</p>
             </div>
           ))}

@@ -4,6 +4,7 @@ import About from "@/components/ui/about";
 import CustomDev from "@/components/ui/customDev";
 import Planning from "@/components/ui/planning";
 import CaseStudy from "@/components/ui/caseStudy";
+import Intro from "@/components/ui/intor";
 
 
 export const metadata = {
@@ -28,6 +29,7 @@ export default function Home() {
   <CustomDev/>
   <Planning/>
   <CaseStudy/>
+  <Intro/>
   
 </div>
 
