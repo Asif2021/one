@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function LogoNavbar() {
   const logos = [
-    { src: "/logos/PoliceLogo.png", alt: "Logo 1" },
-    { src: "/logos/PoliceLogo.png", alt: "Logo 2" },
-    { src: "/logos/PoliceLogo.png", alt: "Logo 3" },
-    { src: "/logos/PoliceLogo.png", alt: "Logo 4" },
-    { src: "/logos/PoliceLogo.png", alt: "Logo 5" },
-    { src: "/logos/PoliceLogo.png", alt: "Logo 6" },
+    { src: "/logos/clutch.png", alt: "Logo 1" },
+    { src: "/logos/goodFirms.png", alt: "Logo 2" },
+    { src: "/logos/iso.png", alt: "Logo 3" },
+    { src: "/logos/microsoft.png", alt: "Logo 4" },
+    { src: "/logos/odoo.png", alt: "Logo 5" },
+    { src: "/logos/PSEB.png", alt: "Logo 6" },
      ];
 
   return (
@@ -26,7 +26,7 @@ export default function LogoNavbar() {
                 alt={logo.alt}
                 width={120}
                 height={60}
-                className="w-full h-auto max-h-10 md:max-h-12 lg:max-h-14 object-contain"
+                className="w-full h-[40px] max-h-10 md:max-h-12 lg:max-h-14 object-contain rounded-2xl"
               />
             </div>
           ))}

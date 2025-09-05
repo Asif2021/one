@@ -7,6 +7,8 @@ import CaseStudy from "@/components/ui/caseStudy";
 import Intro from "@/components/ui/intro";
 import Recognition from "@/components/ui/recognition";
 import BlogsMedia from "@/components/ui/blogsMedia";
+import ReachUs from "@/components/ui/reachUs";
+import Location from "@/components/ui/location";
 
 
 export const metadata = {
@@ -20,7 +22,7 @@ export default function Home() {
   <div className="relative">
   <HeroWithVideo />
   {/* About Section overlaps upward */}
-    <div className="relative z-10 -mt-15 bg-white rounded-t-4xl">
+    <div className="relative z-10 -mt-15 bg-white rounded-t-[77px]">
   <About />
     </div>
   </div>
@@ -30,7 +32,8 @@ export default function Home() {
   <Intro/>
   <Recognition/>
   <BlogsMedia/>
-  
+  <ReachUs/>
+  <Location/>
 </div>
 
   );
