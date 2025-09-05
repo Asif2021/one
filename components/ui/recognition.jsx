@@ -1,23 +1,32 @@
 "use client";
-import LogoNavbar from "./logoNavbar";
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Recognition() {
    
-
   return (
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> 
-    <div className="grid grid-cols-1 md:grid-cols-2 mt-1 bg-gradient-to-r from-cyan-50 to-gray-100 rounded-4xl px-15" >
+  <motion.div 
+  initial={{ opacity: 0, y: 50 }}  
+       whileInView={{ opacity: 1, y: 0 }}  
+       transition={{ duration: 0.8, ease: "easeOut" }}  
+       viewport={{ once: false, amount: 0.3 }} 
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> 
+  {/* first section of the component */}
+    <motion.div 
+    initial={{ opacity: 0, y: 50 }}  
+       whileInView={{ opacity: 1, y: 0 }}  
+       transition={{ duration: 0.8, ease: "easeOut" }}  
+       viewport={{ once: false, amount: 0.3 }} 
+    className="relative w-full h-full grid grid-cols-1 md:grid-cols-2 mt-1 bg-gradient-to-r from-cyan-50 to-gray-100 rounded-4xl md:px-15 z-30" >
       {/* first column */}
     <div className="flex flex-col justify-center p-8">
       <h5 className="text-base md:text-lg font-bold mb-4">Industry Recognitions</h5>
-      <h1 className="text-4xl md:text-5xl font-semibold">We are awarded and recommended</h1>
+      <h1 className="text-4xl font-bold">We are awarded and recommended</h1>
     </div>
   
     {/* second column */}
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-2 p-8">
+  <div className="grid grid-cols-3 gap-2 p-8">
   
   <div className="flex items-center justify-center">
     <Image width={120} height={120}
@@ -37,9 +46,37 @@ export default function Recognition() {
   </div>
 </div>
 
-    </div>
+    </motion.div>
+{/* second section of the component */}
+   <motion.div
+   initial={{ opacity: 0, y: 50 }}  
+       whileInView={{ opacity: 1, y: 0 }}  
+       transition={{ duration: 0.8, ease: "easeOut" }}  
+       viewport={{ once: false, amount: 0.3 }} 
+   className="relative w-full h-[280px] mt-[-80px] overflow-hidden rounded-4xl">
+    {/* Background Video */}
+    <video
+      className="absolute top-0 left-0 w-full h-full object-cover opacity-80"
+      src="/video.mp4"
+      autoPlay
+      loop
+      muted
+      playsInline
+    />
 
-  </div>
+    {/* Content over video */}
+    <div className="relative z-10 flex items-center justify-center h-full my-5">
+      <motion.h1 
+      initial={{ opacity: 0, y: 50 }}  
+       whileInView={{ opacity: 1, y: 0 }}  
+       transition={{ duration: 0.8, ease: "easeOut" }}  
+       viewport={{ once: false, amount: 0.3 }} 
+      className="text-white text-lg md:text-5xl drop-shadow-lg p-10 md:px-12 mt-10">
+       Synavos is a <span className="text-orange-500"> catalyst for change </span> delivering solutions that push boundaries & set new standards.
+      </motion.h1>
+    </div>
+  </motion.div>
+  </motion.div>
 
   );
 }
