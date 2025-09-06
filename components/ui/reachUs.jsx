@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function ReachUs() {
     return (
-<div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row w-full bg-gradient-to-r from-cyan-50 to-gray-100 rounded-t-[45px]">
+<div className="max-w-7xl mx-auto px-4 md:px-8 overflow-hidden pb-10 flex flex-col md:flex-row w-full bg-gradient-to-r from-cyan-50 to-gray-100 rounded-t-[45px]">
     {/* first section with 30% width */}
     <motion.div
     initial={{ opacity: 0, y: 50 }}  
