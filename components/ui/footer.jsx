@@ -12,11 +12,12 @@ const logos = [
 
 export default function Footer(){
     return(
-<div className="max-w-6xl mx-auto p-5 flex flex-col md:flex-row gap-6 border-y border-gray-300">
+ <>
+<div className="max-w-6xl mx-auto p-5 flex flex-col md:flex-row gap-6 border-b md:border-y border-gray-200">
   {/* first section */}
-  <div className="flex flex-col w-[65%]">
-    <h1 className="font-semibold text-2xl mb-4">Certified by</h1>
-    <div className="flex items-center justify-between gap-6">
+  <div className="flex flex-col w-full md:w-[65%]">
+    <h1 className="font-semibold text-base md:text-2xl mb-2">Certified by</h1>
+    <div className="flex items-center justify-between gap-2">
       {logos.map((logo, index) => (
         <div key={index} className="flex-1 flex justify-center">
           <Image
@@ -24,7 +25,7 @@ export default function Footer(){
             alt={logo.alt}
             width={100}
             height={100}
-            className="w-32 h-auto object-contain"
+            className="w-full md:w-32 h-[66px] md:h-auto object-contain"
           />
         </div>
       ))}
@@ -32,8 +33,8 @@ export default function Footer(){
   </div>
 
   {/* second section */}
-  <div className="flex flex-col w-[35%]">
-    <h1 className="font-semibold text-2xl mb-4">Certified by</h1>
+  <div className="flex flex-col w-full md:w-[35%]">
+    <h1 className="font-semibold text-base md:text-2xl mb-2">Recognized by</h1>
     <div className="flex flex-1 items-center justify-between gap-6">
       {logos.slice(0, 4).map((logo, index) => (
         <div key={index} className="flex-1 flex justify-center">
@@ -42,14 +43,18 @@ export default function Footer(){
             alt={logo.alt}
             width={100}
             height={100}
-            className="w-32 h-auto object-contain"
+            className="w-full md:w-32 h-[25px] md:h-auto object-contain"
           />
         </div>
       ))}
     </div>
   </div>
 </div>
-
+<div className="max-w-6xl mx-auto p-5 flex flex-row justify-between items-center text-gray-300 text-[12px] md:text-base">
+    <div>All rights reserved.</div>
+    <div>Copyright &copy; {new Date().getFullYear()}</div>
+</div>
+</>
 
     )
 }
