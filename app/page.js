@@ -9,6 +9,7 @@ import Recognition from "@/components/ui/recognition";
 import BlogsMedia from "@/components/ui/blogsMedia";
 import ReachUs from "@/components/ui/reachUs";
 import Location from "@/components/ui/location";
+import Footer from "@/components/ui/footer";
 
 
 export const metadata = {
@@ -34,6 +35,7 @@ export default function Home() {
   <BlogsMedia/>
   <ReachUs/>
   <Location/>
+  <Footer/>
 </div>
 
   );
