@@ -10,7 +10,7 @@ export default function Planning() {
       whileInView={{ y: 0, opacity: 1 }}           
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: false, amount: 0.3 }}      
-      className="max-w-6xl mx-auto flex mt-10 md:mt-20 flex-col rounded-4xl md:flex-row items-center md:justify-between"
+      className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center md:justify-between mt-10 md:mt-20 rounded-4xl"
     >
   {/* Left content */}
   <div className="w-full md:w-1/2 p-6">
@@ -19,7 +19,7 @@ export default function Planning() {
     <p className="mt-4 text-gray-600 font-semibold">
       We don’t just provide solutions; we ignite transformations. Our digital alchemy turns mundane processes into gold-standard practices. Whether you’re a startup, a mid-sized enterprise, or a global conglomerate, we orchestrate the symphony of your success
     </p>
-    <button className="mt-15 bg-black font-bold text-white px-6 py-2 rounded-xl hover:bg-orange-500 transition">
+    <button className="hidden md:block mt-15 bg-black font-bold text-white px-6 py-2 rounded-xl hover:bg-orange-500 transition">
       Know more
     </button>
   </div>

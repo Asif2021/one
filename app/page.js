@@ -23,7 +23,7 @@ export default function Home() {
   <div className="relative">
   <HeroWithVideo />
   {/* About Section overlaps upward */}
-    <div className="relative z-10 -mt-15 bg-white rounded-t-[77px]">
+    <div className="relative z-10  -mt-14 bg-white rounded-t-[45px] md:rounded-t-[77px]">
   <About />
     </div>
   </div>
