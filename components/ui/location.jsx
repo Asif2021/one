@@ -8,7 +8,7 @@ export default function Location(){
     return(
         <div className="max-w-6xl mx-auto p-5 grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* first Section */}
-            <div className="flex flex-row justify-start p-2 md:p-5 gap-6">
+            <div className="flex flex-row justify-start items-center p-2 md:p-5 gap-6">
             <div className="flex flex-col justify-start p-2 md:p-5 gap-1">
                 <h1 className="text-orange-500 font-bold text-xl">Middle East</h1>
                 <h3>304, Saheel Al Ittihad Road</h3>

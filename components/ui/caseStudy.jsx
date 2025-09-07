@@ -49,32 +49,31 @@ export default function CaseStudy() {
 
 
   return (
-<div className="max-w-6xl mx-auto px-8 pt-8 overflow-hidden my-10 md:mt-0 bg-black text-white rounded-4xl">
-        <h1 className="text-white text-base md:text-xl font-bold">Case Studies</h1>
-    <div className=" hidden md:grid grid-cols-2 gap-4 mt-2 mb-5">
+<div className="w-[90%] md:w-full max-w-7xl mx-auto px-8 pt-8 overflow-hidden my-10 md:mt-0 bg-black text-white rounded-4xl">
+        <h1 className="text-white text-5xl md:text-xl font-semibold md:pl-3 mb-5">Case Studies</h1>
+    <div className=" hidden md:grid grid-cols-2 gap-4 mt-2 mb-5 md:pl-3">
         <h1 className="font-bold text-3xl">Innovation at Every Step</h1>
         <h3 className="pr-20">Embrace the power of cutting-edge technology with us to accelerate growth and drive your business forward.</h3>
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-12 gap-6">
-  <div className="col-span-1 sm:col-span-1 md:col-span-3 flex flex-row md:flex-col gap-5 justify-start p-4 text-gray-500">
+  <div className="col-span-1 sm:col-span-1 md:col-span-2 flex flex-row md:flex-col gap-3 justify-start text-gray-500">
   {headings.map((title, i)=>(
   <motion.h1
   key={title}
   className="flex items-start"
   animate={{ color: heading === i ? "#f97316" : "#808080" }}
-  transition={{ duration: 0.8, ease: "easeInOut" }}
->
+  transition={{ duration: 0.8, ease: "easeInOut" }}>
   <motion.span
     animate={{ borderColor: heading === i ? "#f97316" : "#808080" }}
     transition={{ duration: 0.8, ease: "easeInOut" }}
-    className="border-b-2 md:border-b-0 md:border-l-2 h-0 md:h-8 w-8 md:w-5 mr-0 mb-4 md:mb-0"
+    className="md:border-l-2 h-0 md:h-8 md:w-5 mr-0 mb-4 md:mb-0 text-sm flex flex-row justify-center items-center"
   />
   {title}
 </motion.h1>
   ))}
   </div>
 
-  <div className="col-span-1 sm:col-span-1 md:col-span-4 mb-8 ">
+  <div className="col-span-1 sm:col-span-1 md:col-span-5 mb-8 ">
     <AnimatePresence mode="wait">
         <motion.div
             key={index}

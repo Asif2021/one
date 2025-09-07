@@ -15,8 +15,8 @@ export default function Intro() {
     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">   
   {/* Left Column */}
   <div>
-    <h1 className="text-base md:text-xl font-semibold">Over the years</h1>
-    <h1 className="text-2xl md:text-3xl font-bold text-blue-950 mt-2 pr-0 md:pr-52">
+    <h1 className="text-base md:text-xl font-bold">Over the years</h1>
+    <h1 className="text-4xl font-bold text-blue-950 mt-2 pr-0 md:pr-52">
       Numbers that have enabled us
     </h1>
   </div>
