@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import NavCards from "../ui/navCard"
+import ServiceCard from '../ui/servicesCard'
 
 
 export default function Navbar() {
@@ -24,7 +25,7 @@ export default function Navbar() {
     name: 'Services',
     href: '#',
     icon: ChevronDown,
-    card: <NavCards/>,
+    card: <ServiceCard/>,
     description: 'Explore our range of services services, including web development, mobile app development, and more, and more and more and more and more and more and more and more',
   },
   {
@@ -89,9 +90,9 @@ export default function Navbar() {
                      invisible opacity-0 group-hover:visible group-hover:opacity-100 
                      transition-all duration-200"
         >
-          <div className="max-w-7xl mx-auto px-8 pt-8 overflow-hidden my-10 md:mt-0 
+          <div className="max-w-7xl mx-auto px-8 overflow-hidden my-10 md:mt-0 
                           bg-white text-black rounded-4xl shadow-lg 
-                          min-h-[250px] w-[80vw]">
+                          min-h-[250px] w-[80vw] h-[380px]">
             <div className="text-gray-700">
               {item.card}
             </div>
