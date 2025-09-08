@@ -10,7 +10,7 @@ export default function Intro() {
       initial={{ y: 100, opacity: 0 }}            
        whileInView={{ y: 0, opacity: 1 }}           
        transition={{ duration: 0.6, ease: "easeOut" }}
-       viewport={{ once: true, amount: 0.3 }} className="w-full p-10">
+       viewport={{ once: false }} className="w-full p-10">
     {/* first Section */}
     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">   
   {/* Left Column */}

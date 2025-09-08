@@ -9,7 +9,7 @@ export default function Planning() {
       initial={{ y: 100, opacity: 0 }}            
       whileInView={{ y: 0, opacity: 1 }}           
       transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.3 }}      
+      viewport={{ once: false, }}      
       className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center md:justify-between mt-10 md:mt-20 rounded-4xl"
     >
   {/* Left content */}

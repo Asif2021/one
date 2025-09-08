@@ -10,7 +10,7 @@ export default function BlogsMedia(){
         initial={{ opacity: 0, y: 50 }}  
        whileInView={{ opacity: 1, y: 0 }}  
        transition={{ duration: 0.8, ease: "easeOut" }}  
-       viewport={{ once: false, amount: 0.3 }} 
+       viewport={{ once: false }} 
        className="max-w-6xl mx-auto p-5 grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* first column */}
             <div className="flex flex-col justify-start p-2 md:p-5 gap-3">

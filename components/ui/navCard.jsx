@@ -17,7 +17,7 @@ const NavCards = () => {
             />
    <Link href="#" className="hover:underline flex items-start p-5">
   <span>Payment management solution for cash disbursements and approvals</span>
-  <ArrowRight className="" />
+  <ArrowRight className="text-orange-500" />
 </Link>   
       </div>
            <div className="flex flex-col gap-6">
@@ -30,7 +30,7 @@ const NavCards = () => {
               className="w-full h-auto object-cover rounded-xl"/>
    <Link href="#" className="hover:underline flex items-start p-5">
   <span>Payment management solution for cash disbursements and approvals</span>
-  <ArrowRight className="" />
+  <ArrowRight className="text-orange-500" />
 </Link>       </div>
             <div className="flex flex-col gap-6">
         <h1 className="font-bold">E-Tickets</h1>
@@ -43,7 +43,7 @@ const NavCards = () => {
             />
             <Link href="#" className="hover:underline flex items-start p-5">
   <span>Payment management solution for cash disbursements and approvals</span>
-  <ArrowRight className="" />
+  <ArrowRight className="text-orange-500" />
 </Link>  
       </div>
 

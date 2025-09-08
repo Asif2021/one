@@ -9,7 +9,7 @@ export default function ReachUs() {
     initial={{ opacity: 0, y: 50 }}  
        whileInView={{ opacity: 1, y: 0 }}  
        transition={{ duration: 0.8, ease: "easeOut" }}  
-       viewport={{ once: false, amount: 0.3 }}
+       viewport={{ once: false }}
     className="w-full md:w-[30%] my-10 flex flex-col gap-4 md:p-18">
         <h1 className="text-lg font-bold text-blue-950">Reach us</h1>
         <h1 className="text-3xl font-bold text-blue-950">Meet Your Subject Matter Experts</h1>

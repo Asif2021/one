@@ -99,7 +99,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Mobile Menu Icon */}
            {/* Logo */}
-          <div className="flex-shrink-0 font-bold text-2xl  md:text-left absolute left-4 md:static">
+          <div className="flex-shrink-0 font-bold text-2xl text-orange-500  md:text-left absolute left-4 md:static">
             MyLogo
           </div>
           <div className="flex items-center md:hidden absolute right-4">
@@ -158,19 +158,19 @@ export default function Navbar() {
           {/* Mobile Accordion Menu */}
       {isOpen && (
         <div className="md:hidden bg-white h-screen shadow-lg overflow-y-auto">
-          <div className="w-full max-w-2xl mx-auto divide-y divide-gray-200 rounded-xl">
+          <div className="w-full max-w-2xl mx-auto rounded-xl">
             {links.map((item, i) => (
               <div key={i}>
                 {/* Main Accordion Header */}
                 <button
-                  className="flex w-full items-center justify-between px-4 py-3 text-left font-medium text-lg text-gray-800 hover:bg-gray-100 transition"
+                  className="flex w-full items-center justify-between px-4 py-3 text-left font-medium text-xl font-bold text-gray-800 hover:bg-gray-100 transition"
                   onClick={() => toggleAccordion(i)}
                 >
                   {item.name}
                   {openIndex === i ? (
-                    <ChevronUp className="w-5 h-5 text-gray-700 transition-transform duration-300" />
+                    <ChevronUp className={`w-5 h-5 text-gray-700 transition-transform duration-300 ${item.name === "Blogs" ? "hidden" : "block"}`} />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-700 transition-transform duration-300" />
+                    <ChevronDown className={`w-5 h-5 text-gray-700 transition-transform duration-300 ${item.name === "Blogs" ? "hidden" : "block"}`} />
                   )}
                 </button>
 
