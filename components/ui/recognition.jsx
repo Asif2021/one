@@ -9,14 +9,14 @@ export default function Recognition() {
   <motion.div 
   initial={{ opacity: 0, y: 50 }}  
        whileInView={{ opacity: 1, y: 0 }}  
-       transition={{ duration: 0.8, ease: "easeOut" }}  
+       transition={{ duration: 0.8, ease: "easeInOut" }}  
        viewport={{ once: false }} 
-        className="max-w-7xl mx-auto py-12 w-[90%]"> 
+        className="max-w-7xl mx-auto py-12 w-[90%] md:w-full"> 
   {/* first section of the component */}
     <motion.div 
     initial={{ opacity: 0, y: 50 }}  
        whileInView={{ opacity: 1, y: 0 }}  
-       transition={{ duration: 0.8, ease: "easeOut" }}  
+       transition={{ duration: 0.8, ease: "easeInOut" }}  
        viewport={{ once: false }} 
     className="relative w-full h-full grid grid-cols-1 md:grid-cols-2 mt-1 bg-gradient-to-r from-cyan-50 to-gray-100 rounded-4xl md:px-15 z-30" >
       {/* first column */}
@@ -51,7 +51,7 @@ export default function Recognition() {
    <motion.div
    initial={{ opacity: 0, y: 50 }}  
        whileInView={{ opacity: 1, y: 0 }}  
-       transition={{ duration: 0.8, ease: "easeOut" }}  
+       transition={{ duration: 0.8, ease: "easeInOut" }}  
        viewport={{ once: false }} 
    className="relative w-full h-[280px] mt-[-80px] overflow-hidden rounded-4xl">
     {/* Background Video */}
@@ -69,8 +69,8 @@ export default function Recognition() {
       <motion.h1 
       initial={{ opacity: 0, y: 50 }}  
        whileInView={{ opacity: 1, y: 0 }}  
-       transition={{ duration: 0.8, ease: "easeOut" }}  
-       viewport={{ once: false }} 
+       transition={{ duration: 0.8, ease: "easeInOut" }}  
+       viewport={{ once: false, }} 
       className="text-white text-lg md:text-5xl drop-shadow-lg p-10 md:px-12 mt-10">
        Synavos is a <span className="text-orange-500"> catalyst for change </span> delivering solutions that push boundaries & set new standards.
       </motion.h1>

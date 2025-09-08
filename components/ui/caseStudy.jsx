@@ -33,7 +33,7 @@ export default function CaseStudy() {
             title: "Seamless",
             description: "Outsourced their operational core with a contact center in place",
             stats:[
-                {value:"+100", label:"conversion rate"},
+                {value:"+70", label:"conversion rate"},
                 {value:"+99", label:"customer satisfaction"},
             ]
         },
@@ -80,11 +80,12 @@ export default function CaseStudy() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}>
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            >
         <h1 className="text-2xl font-bold">{data[index].title}</h1>
         <p className="mt-2">{data[index].description}</p>
 
-        <div className="flex flex-row justify-between mt-4">
+        <div className="flex flex-row justify-between md:mr-8 mt-4">
           {data[index].stats.map((stat, i) => (
             <div key={i}>
            <motion.h1 key={index}
@@ -118,8 +119,6 @@ export default function CaseStudy() {
       alt={`image-${index}`}
       width={440}
       height={350}
-      priority
-      loading="eager"
       className="w-full h-72 object-cover rounded-tl-4xl rounded-br-4xl"
     />
   </motion.div>
