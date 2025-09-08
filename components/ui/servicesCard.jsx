@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Settings, ArrowRight } from "lucide-react";
 
-export default function ServicesCard() {
+export default function ServiceCard() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  
   const content = [
     {
       title: "Custom Software Services",
@@ -48,10 +50,10 @@ export default function ServicesCard() {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  
 
   return (
-    <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-10">
+    <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-10 h-[150px]">
   {/* Left div (main headings) */}
   <div className="flex flex-col space-y-6 pr-6 h-auto">
     {content.map((item, index) => (
@@ -74,8 +76,8 @@ export default function ServicesCard() {
         <ArrowRight
           className={`w-4 h-4 transition-opacity duration-200 text-orange-500 ${
             activeIndex === index
-              ? "opacity-100"
-              : "opacity-0 group-hover:opacity-100"
+              ? "opacity-100 visible"
+              : "opacity-0 group-hover:invisible"
           }`}
         />
       </Link>

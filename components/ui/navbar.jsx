@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import NavCards from "../ui/navCard"
 import ServicesCard from '../ui/servicesCard'
+import ProjectCard from "./projectCard";
 
 
 export default function Navbar() {
@@ -76,7 +77,7 @@ export default function Navbar() {
       name: "Projects",
       href: "#",
       icon: ChevronDown,
-      card: <NavCards />,
+      card: <ProjectCard />,
       subHeadings: [
         { title: "DevOps", description: "CI/CD pipelines and automation." },
         { title: "Public & Private Cloud", description: "Cloud migration & optimization." },
