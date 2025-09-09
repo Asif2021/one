@@ -4,6 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Settings, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+
 
 export default function ServiceCard() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -70,16 +72,22 @@ export default function ServiceCard() {
         <div className="flex items-center gap-2">
           {item.icon}
           {item.title}
-        </div>
+        
 
         {/* Right Arrow only on hover */}
-        <ArrowRight
-          className={`w-4 h-4 transition-opacity duration-200 text-orange-500 ${
-            activeIndex === index
-              ? "opacity-100 visible"
-              : "opacity-0 group-hover:invisible"
-          }`}
-        />
+         {activeIndex === index && (
+      <motion.div
+        animate={{ x: [0, 4, 0] }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      >
+        <ArrowRight className="w-4 h-4 text-orange-500" />
+      </motion.div>
+    )}
+    </div>
       </Link>
     ))}
   </div>

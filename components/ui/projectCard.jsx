@@ -2,6 +2,8 @@ import { ArrowRight, Settings } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
+
 
 export default function ProjectCard() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -32,9 +34,16 @@ export default function ProjectCard() {
             <h4 className="text-sm font-semibold text-gray-600">{row.subtitle}</h4>
 
             {/* ArrowRight aligned right */}
-            <div className="flex justify-center">
+             <motion.div
+        animate={{ x: [0, 4, 0] }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+       className="flex justify-center">
               <ArrowRight className={`w-5 h-5 text-orange-500 ${activeIndex == index ? "block" : "hidden"}`} />
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>
